@@ -7,7 +7,7 @@ const vue = new Vue(
       
     },
     method: {
-        addToDo(){
+        addToDo() {
             this.todos.push(this.newtodo);
             this.newtodo="";
         },
