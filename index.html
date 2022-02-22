@@ -19,7 +19,13 @@
         <!-- input e button -->
         <div class="input-section">
 
-            <input class="todoInput" v-model="newtodo" type="text" placeholder="New ToDo">
+            <h1>Inserisci una cosa da fare</h1>
+
+            <input class="todoInput"
+                @keyup.enter="addToDo"
+                v-model="newtodo"
+                type="text"
+                placeholder="New ToDo">
             <button class="buttonToDo" @click="addToDo">Aggiungi</button>
 
         </div>
@@ -29,9 +35,9 @@
         <div class="toDoContainer">
 
             <ul>
-                <li v-for="todo in todos">
-                    {{todo}}
-                    <i class="fa-solid fa-xmark"></i>
+                <li v-for="(todo, index) in todos">
+                    <p @click="throughLine(index)" :class="(todo.done == true) ? 'throughLine' : '' ">{{todo.text}}</p>
+                    <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
 

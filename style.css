@@ -6,12 +6,18 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    height:100vh;
 }
 
 .input-section {
     width:50%;
     margin:50px auto;
     text-align: center;
+}
+
+.input-section h1 {
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .todoInput {
@@ -28,28 +34,39 @@ body {
     border-radius: 10px;
 }
 
+/* sezione toDoList */
 .toDoContainer {
     width:60%;
-    margin:auto;
+    margin:0 auto;
     padding: 10px 10px;
     text-align: left;
+}
+
+.toDoContainer ul {
     background-color: grey;
 }
 
 .toDoContainer li {
-    width:95%;
     list-style: none;
-    margin: 5px 0 5px 10px; 
+    padding: 10px 0 10px 10px; 
 }
 
 .toDoContainer li:hover {
     background-color: lightgray;
 }
 
+.toDoContainer li p {
+    display: inline-block;
+}
+
 .toDoContainer li i{
     float:right;
-    padding:4px;
+    margin:5px 10px 0 0;
     cursor:pointer;
+}
+
+.throughLine{
+    text-decoration: line-through
 }
 
 
